@@ -138,7 +138,8 @@ router.post('/:scheme_id/steps', checkSchemeId, validateStep, (req, res, next) =
       res.status(201).json(allSteps)
     })
     .catch(next)
-})
+}
+)
 
 router.use((err, req, res, next) => { // eslint-disable-line
   res.status(err.status || 500).json({
